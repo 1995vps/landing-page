@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply inv-font-poppins inv-text-gray-600 inv-overflow-x-hidden inv-antialiased;
+}
+
+.header {
+  @apply inv-bg-[url('../img/bg-header.jpg')]  inv-min-h-screen md:inv-min-h-[80vh] inv-bg-gray-100 inv-bg-no-repeat inv-object-cover inv-h-auto inv-bg-cover inv-bg-center inv-relative;
+}
+
+.header nav {
+  @apply md:inv-flex inv-justify-between md:inv-pt-4 inv-items-center;
+}
+
+.header nav .big-dream {
+  @apply inv-px-8 inv-flex inv-justify-between inv-items-center md:inv-block;
+}
+
+.header nav .big-dream h3 {
+  @apply inv-uppercase inv-tracking-wider inv-font-semibold inv-text-xl inv-text-white;
+}
+
+.menu {
+  @apply inv-my-8 inv-p-4 inv-cursor-pointer md:inv-hidden;
+}
+
+.menu div {
+  @apply inv-block inv-h-[2px] inv-w-8 inv-bg-white inv-relative;
+}
+
+.menu div::after,
+.menu div::before {
+  content: "";
+  @apply inv-absolute inv-h-[2px] inv-w-8 inv-bg-white;
+}
+
+.menu div::after {
+  @apply -inv-top-2;
+}
+
+.menu div::before {
+  @apply -inv-bottom-2;
+}
+
+nav ul {
+  @apply inv-absolute inv-right-0 md:inv-relative md:inv-left-0 inv-w-56 inv-h-full inv-ml-auto inv-translate-x-full inv-opacity-100 inv-transform inv-duration-300 md:-inv-translate-x-[25%] md:inv-opacity-100 md:inv-flex;
+}
+
+nav ul.active {
+  @apply inv-translate-x-0 inv-opacity-100 inv-transform inv-duration-300;
+}
+
+nav ul li {
+  @apply inv-py-1 inv-px-4;
+}
+
+nav ul li a {
+  @apply inv-block inv-w-full inv-py-2 inv-tracking-wider inv-font-semibold inv-uppercase inv-text-sm inv-text-white hover:inv-text-yellow-400 inv-transform inv-duration-300 inv-ease-in-out;
+}
+
+nav ul li a.active {
+  @apply inv-text-yellow-500;
+}
+
+.header-content {
+  @apply inv-absolute inv-bottom-[10%] inv-ml-8 md:inv-w-1/2 md:inv-ml-32;
+}
+
+.header-content h1 {
+  @apply inv-text-orange-400 inv-text-5xl inv-font-bold inv-tracking-wide inv-uppercase inv-mb-4 md:inv-text-9xl inv-inset-0;
+}
+
+.header-content h1 span {
+  @apply inv-font-extralight inv-text-orange-400/50 inv-inset-0;
+}
+
+.header-content p {
+  @apply inv-text-orange-300 inv-text-sm inv-tracking-wider inv-mb-16 inv-inset-0;
+}
+
+.header-content .read-more {
+  @apply inv-px-8 inv-py-4 inv-rounded-full inv-text-sm inv-uppercase inv-text-white inv-relative inv-z-10 inv-cursor-pointer;
+}
+
+.header .read-more::before {
+  content: "";
+  @apply inv-absolute  inv-top-0 inv-left-0 inv-w-6 inv-h-6 inv-bg-orange-400 inv-rounded-full inv-z-0 inv-transform inv-duration-300 inv-ease-in-out;
+}
+
+.header .read-more:hover::before {
+  @apply inv-w-full inv-h-full inv-block -inv-z-10 inv-transform inv-duration-300 inv-ease-in-out;
+}
+
+.section-1 {
+  @apply inv-w-full inv-px-24 inv-py-16 inv-grid inv-grid-cols-1 md:inv-grid-cols-3  inv-gap-4 inv-bg-slate-100 dark:inv-bg-slate-700 dark:inv-text-gray-100;
+}
+
+.section-1 .card {
+  @apply inv-w-full inv-text-center inv-mt-auto  inv-transform inv-duration-300 inv-ease-in-out inv-mb-8 md:inv-mb-0;
+}
+
+.section-1 .card img {
+  @apply inv-w-auto inv-h-48 inv-mx-auto;
+}
+
+.section-1 .card .content-div {
+  @apply inv-mt-8;
+}
+
+.section-1 .card .content-div h1 {
+  @apply inv-text-lg inv-font-bold inv-w-1/2 inv-mx-auto inv-border-b inv-border-slate-200 dark:inv-border-slate-600 inv-mb-4 inv-pb-2;
+}
+
+.section-1 .card .content-div p {
+  @apply dark:inv-text-gray-300;
+}
+
+.section-2 {
+  @apply inv-bg-[url('../img/bg-tree.jpg')] inv-h-72 inv-bg-fixed inv-bg-cover inv-bg-center inv-flex  inv-justify-center inv-items-center inv-relative;
+}
+
+.section-2 .content {
+  @apply inv-w-full inv-px-24 inv-z-10 inv-relative;
+}
+
+.section-2 .content::before {
+  content: "";
+  @apply inv-absolute inv-h-0 inv-w-1 inv-bg-orange-400 inv-transform inv-duration-300 inv-ease-in-out inv-left-16;
+}
+
+.section-2 .content:hover::before {
+  @apply inv-h-full inv-transform inv-duration-300 inv-ease-in-out;
+}
+
+.section-2 div h3 {
+  @apply inv-text-lg inv-font-semibold inv-text-gray-200 inv-mb-4;
+}
+
+.section-2 div p {
+  @apply inv-text-gray-200;
+}
+
+.section-2 .filter {
+  @apply inv-absolute inv-top-0 inv-bottom-0 inv-left-0 inv-right-0 inv-bg-black/50 inv-z-0;
+}
+
+.section-3 {
+  @apply inv-px-24 inv-py-32 inv-flex inv-justify-center dark:inv-bg-slate-700;
+}
+
+.section-3 .quotes {
+  @apply inv-border-r-4 inv-border-orange-300 dark:inv-border-orange-400 inv-pr-4 dark:inv-text-gray-200;
+}
+
+.section-3 .quotes div {
+  @apply inv-font-light inv-italic dark:inv-text-gray-200 inv-mb-4  hover:inv-text-orange-500 dark:hover:inv-text-orange-200 inv-transform inv-duration-300;
+}
+
+.section-3 .quotes p {
+  @apply inv-flex inv-justify-end inv-font-light dark:inv-text-gray-300;
+}
+
+footer {
+  @apply inv-flex inv-justify-center inv-py-8 inv-border-t inv-border-slate-100 dark:inv-bg-slate-700 dark:inv-text-gray-200 dark:inv-border-slate-600;
+}

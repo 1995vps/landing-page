@@ -1,0 +1,16 @@
+{
+  "name": "landing-page",
+  "version": "1.2.1",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "tailwindcss": "^3.0.24"
+  },
+  "scripts": {
+    "build-css": "tailwindcss -i ./public/src/input.css -o ./public/dist/output.css --watch -m",
+    "serve": "lite-server --baseDir='./public/'"
+  },
+  "author": "Vishnu P S"
+}
